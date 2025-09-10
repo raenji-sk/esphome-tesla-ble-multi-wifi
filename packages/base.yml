@@ -35,8 +35,13 @@ ota:
   password: !secret ota_password
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+  networks:
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+  - ssid: !secret wifi_ssid_2
+    password: !secret wifi_password_2
+  - ssid: !secret wifi_ssid_3
+    password: !secret wifi_password_3
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     password: !secret wifi_hotspot_password
